@@ -1,0 +1,20 @@
+a(href='/') Show all tasks
+h1 Show All tasks
+
+form#todoForm(method='POST', action='/')
+  .formfield
+    .formfield--prompt Title:
+    input#todoTitle(type='text', name='title', value='')
+  .formfield
+    .formfield--prompt Description:
+    input#todoTitle(type='text', name='description', value='')
+  .formfield
+    .formfield--prompt Priority:
+    input#todoTitle(type='text', name='priority', value='')
+  .formfield
+    .formfield--prompt Due Date:
+    input#todoTitle(type='text', name='todoDueDate', value='')
+  .formfield
+    .formfield--prompt Completed?
+    input#todoTitle(type='checkbox', name='complete', value='')
+  input.submitButton(type='submit')

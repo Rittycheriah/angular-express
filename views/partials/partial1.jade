@@ -1,1 +1,11 @@
-p This is the partial for view 1.
+
+h1 Login to create tasks and save
+form(method='POST', action='/api/register', id='registerForm')
+  .formfield
+    .formfield--prompt Username:
+    input#username(type='text', name='username')
+  .formfield
+    .formfield--prompt Password:
+    input#password(type='password', name='password')
+    br
+    input.submitButton(type='submit')

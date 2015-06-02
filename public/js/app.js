@@ -12,11 +12,19 @@ config(function ($routeProvider, $locationProvider) {
   $routeProvider.
     when('/view1', {
       templateUrl: 'partials/partial1',
-      controller: 'MyCtrl1'
+      controller: 'loginUser'
     }).
     when('/view2', {
       templateUrl: 'partials/partial2',
-      controller: 'MyCtrl2'
+      controller: 'registerUser'
+    }).
+    when('/todoHome', {
+      templateUrl: 'partials/todoHome',
+      controller: 'todoHome'
+    }).
+    when('/newTodo', {
+      templateUrl: 'partials/newTodo',
+      controller: 'newTodo'
     }).
     otherwise({
       redirectTo: '/view1'

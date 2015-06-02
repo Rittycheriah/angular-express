@@ -1,4 +1,11 @@
-p This is the partial for view 2.
-p
-  | Showing of 'interpolate' filter:
-  | {{ 'Current version is v%VERSION%.' | interpolate }}
+
+h1 Register to create tasks
+form(method='POST', action='/api/login', id='registerForm')
+  .formfield
+    .formfield--prompt Username:
+    input#username(type='text', name='username')
+  .formfield
+    .formfield--prompt Password:
+    input#password(type='password', name='password')
+    br
+    input.submitButton(type='submit')
