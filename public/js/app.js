@@ -18,11 +18,11 @@ config(function ($routeProvider, $locationProvider) {
       templateUrl: 'partials/partial2',
       controller: 'registerUser'
     }).
-    when('/todoHome', {
+    when('/todoHome',{
       templateUrl: 'partials/todoHome',
-      controller: 'todoHome'
+      controller:'todoHome'
     }).
-    when('/newTodo', {
+    when('/newTodo',{
       templateUrl: 'partials/newTodo',
       controller: 'newTodo'
     }).
