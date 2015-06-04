@@ -1,14 +1,21 @@
-controllers.controller('loginUser', function ($scope) {
+controllers.controller('loginUser', function ($scope, $http, $location) {
 	$scope.message = 'Login Goat Made!'
-    // $http({
-    //   method: 'POST',
-    //   url: '/api/login'
-    // }).
-    // success({
+  $scope.user = {};
 
-    // }).
-    // error({
+  $scope.login = function() {
+  	console.log('login function');
+  	$http({
+  		method: 'POST',
+  		url: '/api/user/login',
+  		data: $scope.user
+  	}).
+  	success(function(data, status, headers, config){
+  		console.log('you logged in!')
+  		$location.path('/todoHome')
+  	}).
+  	error(function(data, status, headers, config){
+  		console.log('you lose login')
+  	})
+  }
 
-    // });
-
-  })
+ })
