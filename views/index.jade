@@ -3,12 +3,16 @@ extends layout
 block body
   div(ng-controller='AppCtrl')
     h2 Hello, Welcome to your task journal {{name}}
-    ul.menu
-      li
-        a(href='view1') Login
+    ul.menu(ng-controller='NavCtrl', ng-show='!rootuser')
       li
         a(href='view2') Register
-
+      li
+        a(href='view1') Login
+    ul.menu(ng-controller='NavCtrl', ng-show='rootuser')
+      li
+        a(href='newTodo') Create Todo
+      li 
+        a.button.btn.btn-danger(ng-click='logout()') {{rootuser}}
     div(ng-view)
 
     div

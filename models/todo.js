@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var todoSchema = mongoose.Schema({
-    due_date: {type: Date, default: Date.now },
+    due_date: {type: String, default: ''},
     description: {type: String, required: true, default: ''},
     title: {type: String, required: true, default: ''},
     priority: {type: Number, default: 1 },

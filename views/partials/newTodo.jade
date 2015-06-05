@@ -1,20 +1,21 @@
 a(href='/todoHome') Show all tasks
 h1 Show All tasks {{message}}
 
-form#todoForm(method='POST', action='/')
+form#todoForm(method='POST', name='taskForm')
   .formfield
     .formfield--prompt Title:
-    input#todoTitle(type='text', name='title', value='')
+    input#todoTitle(type='text', name='title', ng-model= 'todo.title')
   .formfield
     .formfield--prompt Description:
-    input#todoTitle(type='text', name='description', value='')
+    input#todoTitle(type='text', name='description', ng-model= 'todo.description')
   .formfield
     .formfield--prompt Priority:
-    input#todoTitle(type='text', name='priority', value='')
+    input#todoTitle(type='text', name='priority', ng-model= 'todo.priority')
   .formfield
     .formfield--prompt Due Date:
-    input#todoTitle(type='text', name='todoDueDate', value='')
+    input#todoTitle(type='text', name='todoDueDate', ng-model= 'todo.due_date')
   .formfield
     .formfield--prompt Completed?
-    input#todoTitle(type='checkbox', name='complete', value='')
-  input.submitButton(type='submit')
+    input#todoTitle(type='checkbox', name='complete', ng-model= 'todo.complete')
+    input#todoHidden(type='hidden', ng-model = 'todo.user', val='user')
+  input.submitButton(type='submit', ng-click= 'newTask()')

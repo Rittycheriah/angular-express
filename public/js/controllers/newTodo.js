@@ -1,15 +1,23 @@
-controllers.controller('newTodo', function($scope) {
+controllers.controller('newTodo', function ($scope, $http, $location) {
 	$scope.message = 'new Todo Chicken Made!'
-    // $http({
-    //   method: 'POST',
-    //   url: '/api/tasks',
+	$scope.todo = {};
 
-    // }).
-    // success({
+	$scope.newTask = function () {
+		console.log('new task');
 
-    // }).
-    // error({
+    $http({
+      method: 'POST',
+      url: '/api/tasks',
+      data: $scope.todo
+    }).
+    success(function(data, status, headers, config) {
+    	console.log('new task made!')
+    	location.path('/todoHome')
+    }).
+    error(function(data, status, headers, config) {
+    	console.log('you lose at new Todo')
+      console.log($scope.todo)
+    });
+	}
 
-    // });
-
-  });
+ });

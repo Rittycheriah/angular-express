@@ -1,4 +1,4 @@
-controllers.controller('loginUser', function ($scope, $http, $location) {
+controllers.controller('loginUser', function ($scope, $http, $location, $rootScope) {
 	$scope.message = 'Login Goat Made!'
   $scope.user = {};
 
@@ -12,6 +12,7 @@ controllers.controller('loginUser', function ($scope, $http, $location) {
   	success(function(data, status, headers, config){
   		console.log('you logged in!')
   		$location.path('/todoHome')
+  		$rootScope.rootuser = data.username;
   	}).
   	error(function(data, status, headers, config){
   		console.log('you lose login')
