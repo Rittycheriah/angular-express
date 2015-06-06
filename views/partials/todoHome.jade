@@ -3,11 +3,11 @@ a(href='/newTodo') Create a new task
 
 .list(ng-repeat= 'thing in things')
   .title Title: {{thing.title}}
-  .description Description:{{thing.description}}
-  .priority Priority:{{thing.priority}}
+  .description Description: {{thing.description}}
+  .priority Priority: {{thing.priority}}
   .dueDate Due Date: {{thing.due_date}}
   .actions
-    a.deleteButtton Delete  
+    a.deleteButtton(ng-click='delete(thing._id)') Delete  
     a.editButton Edit
 
 
