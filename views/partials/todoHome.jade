@@ -8,6 +8,6 @@ a(href='/newTodo') Create a new task
   .dueDate Due Date: {{thing.due_date}}
   .actions
     a.deleteButtton(ng-click='delete(thing._id)') Delete  
-    a.editButton Edit
+    a.editButton(ng-click='edit(thing._id)') Edit
 
 

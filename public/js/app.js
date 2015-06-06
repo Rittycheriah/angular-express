@@ -6,7 +6,8 @@ angular.module('myApp', [
   'myApp.controllers',
   'myApp.filters',
   'myApp.services',
-  'myApp.directives'
+  'myApp.directives', 
+  'myApp.taskService'
 ]).
 config(function ($routeProvider, $locationProvider) {
   $routeProvider.
@@ -25,6 +26,10 @@ config(function ($routeProvider, $locationProvider) {
     when('/newTodo',{
       templateUrl: 'partials/newTodo',
       controller: 'newTodo'
+    }).
+    when('/editItem', {
+      templateUrl: 'partials/editItem',
+      controller: 'editTodo'
     }).
     otherwise({
       redirectTo: '/view1'
