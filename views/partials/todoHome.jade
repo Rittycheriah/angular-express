@@ -1,11 +1,11 @@
 h1 {{message}}
 a(href='/newTodo') Create a new task
 
-.list
-  .title Title:
-  .description Description:
-  .priority Priority: 
-  .dueDate Due Date: 
+.list(ng-repeat= 'thing in things')
+  .title Title: {{thing.title}}
+  .description Description:{{thing.description}}
+  .priority Priority:{{thing.priority}}
+  .dueDate Due Date: {{thing.due_date}}
   .actions
     a.deleteButtton Delete  
     a.editButton Edit

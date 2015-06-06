@@ -12,7 +12,8 @@ controllers.controller('newTodo', function ($scope, $http, $location) {
     }).
     success(function(data, status, headers, config) {
     	console.log('new task made!')
-    	location.path('/todoHome')
+      console.log($scope.todo)
+    	return $location.path('/todoHome');
     }).
     error(function(data, status, headers, config) {
     	console.log('you lose at new Todo')
