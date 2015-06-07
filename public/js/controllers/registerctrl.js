@@ -1,5 +1,5 @@
 controllers.controller('registerUser', function ($scope, $http, $location) {
-    $scope.message = 'Register Made!';
+    $scope.message = 'Register For Your Account';
     $scope.user = {};
 
     $scope.register = function() {

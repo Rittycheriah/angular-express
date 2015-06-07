@@ -1,5 +1,5 @@
 
-h1 Register to create tasks {{message}}
+h2 {{message}}
 form(role='form', novalidate, name='userForm', id='registerForm')
   .formfield
     .formfield--prompt Username:
@@ -8,4 +8,4 @@ form(role='form', novalidate, name='userForm', id='registerForm')
     .formfield--prompt Password:
     input#password(type='password', name='password', ng-model='user.password', required, ng-minlength='4')
     br
-    input.submitButton(type='submit', ng-show='userForm.$valid', ng-click='register()')
+    input.submitButton.reg(type='submit', ng-show='userForm.$valid', ng-click='register()')

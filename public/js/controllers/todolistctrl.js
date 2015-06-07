@@ -6,7 +6,7 @@ controllers.controller('todoHome',
     'taskService',
 
     function ($scope, $http, $location, taskService) {
-    	$scope.message = 'Todo List Cow Made!';
+    	$scope.message = 'All of Your Todo Items:';
     	$scope.things = [];
       $scope.task='';
 

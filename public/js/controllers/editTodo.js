@@ -7,7 +7,7 @@ controllers.controller('editTodo',
     'taskService', 
 
       function ($scope, $http, $location, taskService) {
-  	  $scope.message = 'Edit Todo Cluck It!';
+  	  $scope.message = 'Edit Your Item Below:';
   	  $scope.todo = {};
       $scope.task = taskService.getTask();
 

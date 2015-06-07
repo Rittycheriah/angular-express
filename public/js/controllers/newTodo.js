@@ -1,5 +1,5 @@
 controllers.controller('newTodo', function ($scope, $http, $location) {
-	$scope.message = 'new Todo Chicken Made!'
+	$scope.message = 'Another item? Save it below.'
 	$scope.todo = {};
 
 	$scope.newTask = function () {

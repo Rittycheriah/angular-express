@@ -1,5 +1,4 @@
-
-h1 Login to create tasks and save {{message}}
+h2#login {{message}}
 form(method='POST', novalidate, id='loginForm', name='userForm')
   .formfield
     .formfield--prompt Username:
@@ -8,4 +7,4 @@ form(method='POST', novalidate, id='loginForm', name='userForm')
     .formfield--prompt Password:
     input#password(type='password', name='password', ng-model='user.password')
     br
-    input.submitButton(type='submit', ng-click='login()')
+    input.submitButton.log(type='submit', ng-click='login()')

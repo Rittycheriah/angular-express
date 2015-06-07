@@ -1,18 +1,23 @@
 /* app css stylesheet */
 
+h1.welcomeMsg {
+  margin-left: 5%;
+}
+
+h1.editMsg {
+  margin-left: 5%;
+}
+
+h1.createMsg {
+  margin-left: 5%;
+}
+
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
   margin-bottom: 2em;
+  margin-left: 5%;
   padding: 0 0 0.5em;
-}
-
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
 }
 
 .menu > li {
@@ -20,11 +25,41 @@
 }
 
 .menu > li:before {
-  content: "|";
+  content: "  ";
   padding-right: 0.3em;
 }
 
 .menu > li:nth-child(1):before {
   content: "";
   padding: 0;
+}
+
+h2 {
+  margin-left: 5%;
+}
+
+div.formfield {
+  margin-left: 5%;
+}
+
+.submitButton {
+  margin-top: 2%;
+  margin-bottom: 10%;
+  margin-left: 5%;
+}
+
+.submitButton.log {
+  margin-top: 2%;
+  margin-bottom: 10%; 
+  margin-left: 0 !important; 
+}
+
+.submitButton.reg {
+  margin-top: 2%;
+  margin-bottom: 10%;
+  margin-left: 0 !important;
+}
+
+.list {
+  margin-left: 5%;
 }

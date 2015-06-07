@@ -1,5 +1,5 @@
 controllers.controller('loginUser', function ($scope, $http, $location, $rootScope) {
-	$scope.message = 'Login Goat Made!'
+	$scope.message = 'Login Below!'
   $scope.user = {};
 
   $scope.login = function() {

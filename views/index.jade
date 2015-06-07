@@ -2,17 +2,21 @@ extends layout
 
 block body
   div(ng-controller='AppCtrl')
-    h2 Hello, Welcome to your task journal {{name}}
+    h1.welcomeMsg(ng-show='!rootuser') Angular Todo App -- Please Login or Register
+
+    h2(ng-show='rootuser') Hello, Welcome to your planner, {{rootuser}}
     ul.menu(ng-controller='NavCtrl', ng-show='!rootuser')
       li
-        a(href='view2') Register
+        a.button.btn.btn-primary(href='view2') Register
       li
-        a(href='view1') Login
+        a(href='view1').button.btn.btn-info Login
     ul.menu(ng-controller='NavCtrl', ng-show='rootuser')
       li
-        a(href='newTodo') Create Todo
+        a.button.btn.btn-primary(href='/todoHome') Show All Tasks
+      li
+        a.button.btn.btn-info(href='/newTodo') Create Todo
       li 
-        a.button.btn.btn-danger(ng-click='logout()') {{rootuser}}
+        a.button.btn.btn-danger(ng-click='logout()') Logout
     div(ng-view)
 
     div

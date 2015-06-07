@@ -1,5 +1,5 @@
-a(href='/todoHome') Show all tasks
-h1 Show All tasks {{message}}
+
+h1.createMsg {{message}}
 
 form#todoForm(method='POST', name='taskForm')
   .formfield
@@ -16,6 +16,6 @@ form#todoForm(method='POST', name='taskForm')
     input#todoTitle(type='text', name='todoDueDate', ng-model='todo.due_date')
   .formfield
     .formfield--prompt Completed?
-    input#todoTitle(type='checkbox', name='complete', ng-model='todo.complete')
-    input#todoHidden(type='hidden', ng-model = 'todo.user', val='user')
+    input#todoTitle(type='checkbox', name='complete', ng-model='todo.complete', ng-change='changeCheck()', val)
+    input#todoHidden(type='hidden', ng-model = 'todo.user', ng-true-value= 'true', ng-false-value= 'false')
   input.submitButton(type='submit', ng-click= 'newTask()')
