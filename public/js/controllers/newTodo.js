@@ -7,7 +7,8 @@ controllers.controller('newTodo', function ($scope, $http, $location) {
 
     $http({
       method: 'POST',
-      url: '/api/tasks'
+      url: '/api/tasks',
+      data: $scope.todo
     }).
     success(function(data, status, headers, config) {
     	console.log('new task made!')
