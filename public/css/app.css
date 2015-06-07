@@ -1,7 +1,17 @@
 /* app css stylesheet */
+* {
+  font-family: 'Cabin Sketch', cursive;
+  color: blue;
+ }
+
+body {
+   background-image: url('http://www.crazymonkeydefense.com/wp-content/uploads/2013/10/Grey-background-for-site11.jpg');
+   opacity: .85;
+}
 
 h1.welcomeMsg {
   margin-left: 5%;
+  font-weight: bold;
 }
 
 h1.editMsg {
@@ -62,4 +72,19 @@ div.formfield {
 
 .list {
   margin-left: 5%;
+  margin-bottom: 1%;
+  display: inline-block;
+  background-color: white;
+  padding: 1%;
+  height: 160px;
+  width: 160px;
+  border-radius: 25px;
+}
+
+.listItems {
+  padding: .1%;
+}
+
+a.deleteButton, a.editButton {
+  font-weight: bold;
 }
