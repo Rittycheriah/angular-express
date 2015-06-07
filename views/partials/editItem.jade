@@ -17,5 +17,4 @@ form#todoForm(name='taskForm')
   .formfield
     .formfield--prompt Completed?
     input#todoTitle(type='checkbox', name='complete', ng-model= 'task.complete')
-    input#todoHidden(type='hidden', ng-model='task.id')
-  input.submitButton(type='submit', ng-click='updateTask()')
+  input.submitButton(type='submit', ng-click='updateTask(task._id)')
